@@ -4,9 +4,18 @@ public class Usuario {
 	
 	String USER_NAME;
 	String SENHA;
+	String EMAIL;
 	
 	
 	
+	
+	
+	public String getEMAIL() {
+		return EMAIL;
+	}
+	public void setEMAIL(String eMAIL) {
+		EMAIL = eMAIL;
+	}
 	public String getUSER_NAME() {
 		return USER_NAME;
 	}

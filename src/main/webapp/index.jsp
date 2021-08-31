@@ -4,9 +4,19 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Login</title>
 </head>
 <body>
+
+
+
+	<label>nome:</label>
+	<input id="nome" name="nome"><br>
+	<label>senha:</label>
+	<input id="senha" name="senha"><br>
+
+	<a href="CadastrarUsuario.jsp" ><button>Criar usuario</button></a>
+	
 
 </body>
 </html>

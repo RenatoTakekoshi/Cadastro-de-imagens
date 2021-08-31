@@ -2,14 +2,29 @@ package imgStore.DB;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ConexaoDB {
 	
-	private static String username = "root";
-	private static String senha = "";
-	private static String bancoURL = "jdbc:mysql://localhost:3306/imgstore";
 	
-	public static Connection createConnection() throws Exception{
+	
+	  static {
+	        try {
+	            Class.forName("com.mysql.jdbc.Driver");
+	        } catch (ClassNotFoundException ex) {
+	            Logger.getLogger(ConexaoDB.class.getName()).log(Level.SEVERE, null, ex);
+	        }
+	  }
+	  
+	
+	
+	public static Connection createConnection() throws SQLException{
+		
+		 String username = "root";
+		 String senha = "";
+		 String bancoURL = "jdbc:mysql://localhost:3306/imgstore";
 		Connection connection = DriverManager.getConnection(bancoURL,username,senha);
 		return connection;
 		
