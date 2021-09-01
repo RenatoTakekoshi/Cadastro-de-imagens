@@ -8,8 +8,23 @@ public class Usuario {
 	
 	
 	
+
+	public Usuario() {
+		super();
+	}
+
+	public Usuario(String USER_NAME, String SENHA) {
+		this.USER_NAME = USER_NAME;
+		this.SENHA = SENHA;
+	}
 	
-	
+	public Usuario(String uSER_NAME, String sENHA, String eMAIL) {
+		super();
+		USER_NAME = uSER_NAME;
+		SENHA = sENHA;
+		EMAIL = eMAIL;
+	}
+
 	public String getEMAIL() {
 		return EMAIL;
 	}

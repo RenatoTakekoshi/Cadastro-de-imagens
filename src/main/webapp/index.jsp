@@ -8,15 +8,17 @@
 </head>
 <body>
 
-
-
+<form action="LoginServelet" method="post">
 	<label>nome:</label>
 	<input id="nome" name="nome"><br>
 	<label>senha:</label>
-	<input id="senha" name="senha"><br>
-
+	<input type="password" id="senha" name="senha"><br>
+	<h4>${msgErro}</h4>
+	<input type="submit" value="Entrar">
+	
+	</form>
+	
 	<a href="CadastrarUsuario.jsp" ><button>Criar usuario</button></a>
 	
-
 </body>
 </html>
