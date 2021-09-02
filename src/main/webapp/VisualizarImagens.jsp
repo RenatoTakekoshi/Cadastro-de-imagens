@@ -9,6 +9,7 @@
 <body>
 	<h1>Imagens</h1>
 	<a href="Deslogar.jsp" ><button>Encerrar sessão</button></a>
+	<a href="CadastroImagem.jsp" ><button>Adicionar Imagem</button></a>
 
 </body>
 </html>
