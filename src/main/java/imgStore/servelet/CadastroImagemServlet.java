@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import imgStore.dao.ImagemDAO;
 import imgStore.entidades.Imagem;
@@ -32,9 +33,12 @@ public class CadastroImagemServlet extends HttpServlet {
 		Imagem imagem = new Imagem();
 		imagem.setIMG_URL(request.getParameter("urlimagemBase64"));
 		imagem.setIMG_TITULO(request.getParameter("titulo"));
+		HttpServletRequest req = request;
+		HttpSession session =req.getSession();
+		String usuarioLogado = (String) session.getAttribute("usuario");
 		
 		ImagemDAO salvar = new ImagemDAO();
-		salvar.CadastrarImagem(imagem);
+		//salvar.CadastrarImagem(imagem,usuarioLogado);
 		
 		
 	}

@@ -18,11 +18,11 @@ public class Usuario {
 		this.SENHA = SENHA;
 	}
 	
-	public Usuario(String uSER_NAME, String sENHA, String eMAIL) {
+	public Usuario(String USER_NAME, String SENHA, String EMAIL) {
 		super();
-		USER_NAME = uSER_NAME;
-		SENHA = sENHA;
-		EMAIL = eMAIL;
+		this.USER_NAME = USER_NAME;
+		this.SENHA = SENHA;
+		this.EMAIL = EMAIL;
 	}
 
 	public String getEMAIL() {

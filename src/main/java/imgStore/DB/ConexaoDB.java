@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 public class ConexaoDB {
 	
-	
+
 	
 	  static {
 	        try {
@@ -18,7 +18,7 @@ public class ConexaoDB {
 	        }
 	  }
 	  
-	
+
 	
 	public static Connection createConnection() throws SQLException{
 		

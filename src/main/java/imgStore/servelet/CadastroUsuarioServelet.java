@@ -9,6 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.jasypt.util.password.BasicPasswordEncryptor;
 
 import imgStore.dao.usuarioDAO;
 import imgStore.entidades.Usuario;
@@ -32,10 +35,15 @@ public class CadastroUsuarioServelet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
+		BasicPasswordEncryptor senhaCodificada = new BasicPasswordEncryptor();
+		
 		Usuario usuario = new Usuario();
 		String nome = request.getParameter("nome") ;
 		String senha = request.getParameter("senha");
 		String email = request.getParameter("email");
+		
+
+		
 		
 		
 		if(nome.isEmpty() || senha.isEmpty() || email.isEmpty() ) {
@@ -45,7 +53,7 @@ public class CadastroUsuarioServelet extends HttpServlet {
 		}else {
 			
 			usuario.setUSER_NAME(nome);
-			usuario.setSENHA(senha);
+			usuario.setSENHA(senhaCodificada.encryptPassword(senha));
 			usuario.setEMAIL(email);
 			usuarioDAO.cadastrarUsuario(usuario);
 			

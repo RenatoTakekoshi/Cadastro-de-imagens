@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.jasypt.util.password.BasicPasswordEncryptor;
+
+import imgStore.dao.usuarioDAO;
 import imgStore.entidades.Usuario;
 
 
@@ -31,16 +34,21 @@ public class LoginServelet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 		
+		BasicPasswordEncryptor senhaCodificada = new BasicPasswordEncryptor();
+		
 		String login = request.getParameter("nome");
 		String senha = request.getParameter("senha");
 		
-		if(login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("123")) {
-			Usuario usuario = new Usuario(login,senha);
-			
+		Usuario usuarioAutenticar = usuarioDAO.buscarUsuario(login);
+		boolean verificar = senhaCodificada.checkPassword(senha,usuarioAutenticar.getSENHA());
+
+		
+		if(usuarioAutenticar.getUSER_NAME()!=null && usuarioAutenticar.getUSER_NAME().equals(login) && verificar == true)  {
+			//Usuario usuario = new Usuario(login,senha);
 			
 			HttpServletRequest req = request;
 			HttpSession session =req.getSession();
-			session.setAttribute("usuario", usuario);
+			session.setAttribute("usuario", login);
 			response.sendRedirect("/imgStore/VisualizarImagens.jsp");
 			//RequestDispatcher direcionar = request.getRequestDispatcher("/VisualizarImagens.jsp");
 			//direcionar.forward(request, response);
