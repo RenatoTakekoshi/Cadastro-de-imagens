@@ -56,6 +56,9 @@ public class CadastroUsuarioServelet extends HttpServlet {
 			usuario.setSENHA(senhaCodificada.encryptPassword(senha));
 			usuario.setEMAIL(email);
 			usuarioDAO.cadastrarUsuario(usuario);
+			RequestDispatcher direcionar = request.getRequestDispatcher("index.jsp");
+			request.setAttribute("msgErro", "Usuario Criado, faça o login");
+			direcionar.forward(request, response);
 			
 		}
 		

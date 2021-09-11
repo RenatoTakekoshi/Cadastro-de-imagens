@@ -9,6 +9,7 @@
 <body>
 
 <form action="LoginServelet" method="post">
+
 	<label>nome:</label>
 	<input id="nome" name="nome"><br>
 	<label>senha:</label>
@@ -19,6 +20,7 @@
 	</form>
 	
 	<a href="CadastrarUsuario.jsp" ><button>Criar usuario</button></a>
+	<a href="principal/ListarImagem" ><button>Listar Usuario</button></a>
 	
 </body>
 </html>

@@ -7,6 +7,19 @@ public class Imagem {
 	String IMG_TITULO;
 	
 	
+	
+	
+	public Imagem() {
+		super();
+	}
+
+	public Imagem(int iD_IMG, String iMG_URL, String iMG_TITULO) {
+		super();
+		ID_IMG = iD_IMG;
+		IMG_URL = iMG_URL;
+		IMG_TITULO = iMG_TITULO;
+	}
+
 	public int getID_IMG() {
 		return ID_IMG;
 	}

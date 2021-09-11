@@ -38,6 +38,9 @@ public class LoginServelet extends HttpServlet {
 		
 		String login = request.getParameter("nome");
 		String senha = request.getParameter("senha");
+		String url = request.getParameter("url");
+		System.out.println("teste");
+		System.out.println(url);
 		
 		Usuario usuarioAutenticar = usuarioDAO.buscarUsuario(login);
 		boolean verificar = senhaCodificada.checkPassword(senha,usuarioAutenticar.getSENHA());
@@ -49,9 +52,8 @@ public class LoginServelet extends HttpServlet {
 			HttpServletRequest req = request;
 			HttpSession session =req.getSession();
 			session.setAttribute("usuario", login);
-			response.sendRedirect("/imgStore/VisualizarImagens.jsp");
-			//RequestDispatcher direcionar = request.getRequestDispatcher("/VisualizarImagens.jsp");
-			//direcionar.forward(request, response);
+			response.sendRedirect("principal/Menu.jsp");
+
 			return;
 				
 		}else {

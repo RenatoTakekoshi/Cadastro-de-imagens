@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-@WebFilter(urlPatterns= {"/VisualizarImagens.jsp"})
+@WebFilter(urlPatterns= {"/principal/*"})
 public class AutenticacaoFiltro implements Filter {
 
     public AutenticacaoFiltro() {
@@ -34,10 +34,17 @@ public class AutenticacaoFiltro implements Filter {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpSession session =req.getSession();
 		session.getAttribute("usuario");
+		String login = (String) session.getAttribute("usuario"); 
+		//String url = request.getParameter("url");
 		
-		if(session.getAttribute("usuario") == null) {
-			System.out.println("sim");			
-			RequestDispatcher direcionar = request.getRequestDispatcher("/index.jsp");
+		//String urlParaAutenticar = req.getServletPath();
+		//System.out.println(urlParaAutenticar);
+		
+		if(login == null ) {
+			System.out.println(login);
+			System.out.println("não");			
+			//RequestDispatcher direcionar = request.getRequestDispatcher("/index.jsp?url="+urlParaAutenticar);
+			RequestDispatcher direcionar = request.getRequestDispatcher("/PaginaBarrada.jsp");
 			direcionar.forward(request, response);
 			return;
 		}

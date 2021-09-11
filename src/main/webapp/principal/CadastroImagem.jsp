@@ -14,18 +14,19 @@
 <h1>Cadastre suas imagens</h1>
 
 
-<form action="CadastroImagemServlet" method="post">
+<form action="/imgStore/CadastroImagemServlet" method="post">
 
  <input type="text" name="urlimagemBase64" id="urlimagemBase64" value="${imagem.URL_IMG}"/>
 
 	<label>Titulo da imagem:</label>
 	<input type="text" id="titulo" name="titulo"><br>
 	<img alt="imagem"  src="" id="target" widht="200" height="200"><br>
-	<input type="file" id="file" name="file" onchange="uploadFile();"/>
+	<input type="file" id="file" name="file" onchange="uploadFile();"/><br>
 
 	<input type="submit" value="enviar">
 
 </form>
+<a href="Menu.jsp" ><button>Voltar ao menu</button></a>
 
 </body>
 <script type="text/javascript">

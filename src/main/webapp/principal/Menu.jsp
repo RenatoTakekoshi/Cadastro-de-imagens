@@ -8,8 +8,9 @@
 </head>
 <body>
 	<h1>Imagens</h1>
-	<a href="Deslogar.jsp" ><button>Encerrar sessão</button></a>
-	<a href="CadastroImagem.jsp" ><button>Adicionar Imagem</button></a>
+	<a href="CadastroImagem.jsp" ><button>Adicionar Imagem</button></a><br>
+	<a href="ListarImagem"><button>Visualizar imagens</button></a><br>
+	<a href="/imgStore/Deslogar.jsp" ><button>Encerrar sessão</button></a>
 
 </body>
 </html>

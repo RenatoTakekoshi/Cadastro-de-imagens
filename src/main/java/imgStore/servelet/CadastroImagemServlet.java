@@ -38,7 +38,8 @@ public class CadastroImagemServlet extends HttpServlet {
 		String usuarioLogado = (String) session.getAttribute("usuario");
 		
 		ImagemDAO salvar = new ImagemDAO();
-		//salvar.CadastrarImagem(imagem,usuarioLogado);
+		salvar.CadastrarImagem(imagem,usuarioLogado);
+		response.sendRedirect("principal/Menu.jsp");
 		
 		
 	}
