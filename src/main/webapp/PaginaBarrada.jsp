@@ -8,9 +8,11 @@
 <link rel="stylesheet"  href="/imgStore/estilo/cssLogin.css">
 </head>
 <body>
+
+<div class="login">
 <h1>Faça o Login para acessar a pagina</h1>
 
-<a href="/imgStore/index.jsp" ><button>Voltar</button></a>
-
+<a href="/imgStore/index.jsp" ><button class="btnDados">Voltar</button></a>
+</div>
 </body>
 </html>

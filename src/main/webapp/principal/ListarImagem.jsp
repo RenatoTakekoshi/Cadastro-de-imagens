@@ -7,17 +7,32 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Imagens</title>
+<link rel="stylesheet"  href="/imgStore/estilo/cssImg.css">
+
 </head>
 <body>
+<header>
+<div class="topo">
 	<h1>Galeria</h1>
+	</div>
+<div class="btnHeader">
+		<a href="Menu.jsp" ><button class="btnMenu">Voltar ao menu</button></a>
+	</div>
 	
+	</header>
+	
+
+	<div class="galeria">
 	<c:forEach var="c" items="${imagens}">
+		<div class="itemGaleria">
+		<img src="<c:out value="${c.IMG_URL}"/>" id="target" name="target" class="imgGaleria">
+		<span class="tituloImg">${c.IMG_TITULO }</span>
+		
+		</div>
+		</c:forEach>
 	
-	<input name="IMG_URL" type="text" value="${c.IMG_TITULO}"><br>
-	<img src="<c:out value="${c.IMG_URL}"/>" width="140px" height="140px" 
-                             style="min-height: 100px;" border="0" id="target" name="target"><br>
-	</c:forEach>
-	<a href="Menu.jsp" ><button>Voltar ao menu</button></a>
+	</div>
+
 
 	
 </body>
