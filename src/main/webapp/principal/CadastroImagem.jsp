@@ -8,25 +8,31 @@
 <script type="text/javascript" src="app/jquery-3.6.0.js"></script>
 <meta charset="ISO-8859-1">
 
-<title>Insert title here</title>
+<title>Cadastrar imagens</title>
+<link rel="stylesheet"  href="/imgStore/estilo/cssLogin.css">
 </head>
 <body>
+
+
+<div class="login">
 <h1>Cadastre suas imagens</h1>
-
-
 <form action="/imgStore/CadastroImagemServlet" method="post">
 
- <input type="text" name="urlimagemBase64" id="urlimagemBase64" value="${imagem.URL_IMG}"/>
+ <input type="hidden" name="urlimagemBase64" id="urlimagemBase64" value="${imagem.URL_IMG}"/>
 
-	<label>Titulo da imagem:</label>
-	<input type="text" id="titulo" name="titulo"><br>
-	<img alt="imagem"  src="" id="target" widht="200" height="200"><br>
-	<input type="file" id="file" name="file" onchange="uploadFile();"/><br>
 
-	<input type="submit" value="enviar">
+	<input type="text" id="titulo" name="titulo" placeholder="Titulo da imagem" class="dadosLogin"><br><br>
+	<img alt="imagem"  src="" id="target" widht="200" height="200" class="imgSalvar"><br><br>
+	<label for="file" class="btnDados">Carregar foto</label>
+	<input type="file" id="file" name="file" onchange="uploadFile();"  class="inputFile"/><br><br>
+
+	<input type="submit" value="enviar" class="btnDados"><br><br>
+	
 
 </form>
-<a href="Menu.jsp" ><button>Voltar ao menu</button></a>
+<a href="Menu.jsp" ><button class="btnDados">Voltar ao menu</button></a>
+
+</div>
 
 </body>
 <script type="text/javascript">

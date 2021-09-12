@@ -5,22 +5,23 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login</title>
+<link rel="stylesheet"  href="estilo/cssLogin.css">
 </head>
 <body>
 
-<form action="LoginServelet" method="post">
 
-	<label>nome:</label>
-	<input id="nome" name="nome"><br>
-	<label>senha:</label>
-	<input type="password" id="senha" name="senha"><br>
+	<div class="login">
+	<form action="LoginServelet" method="post">
+	<h1>Login</h1><br>
+	<input id="nome" name="nome" placeholder="Usuario" class="dadosLogin"><br><br>
+	<input type="password" id="senha" name="senha" placeholder="Senha" class="dadosLogin"><br><br>
 	<h4>${msgErro}</h4>
-	<input type="submit" value="Entrar">
-	
+	<input type="submit" value="Entrar" class="btnDados"><br><br>
+
 	</form>
-	
-	<a href="CadastrarUsuario.jsp" ><button>Criar usuario</button></a>
-	<a href="principal/ListarImagem" ><button>Listar Usuario</button></a>
+		<a href="CadastrarUsuario.jsp" ><button class="btnDados">Criar usuario</button></a>
+	</div>
 	
 </body>
+
 </html>

@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet"  href="/imgStore/estilo/cssLogin.css">
 </head>
 <body>
 <h1>Faça o Login para acessar a pagina</h1>
