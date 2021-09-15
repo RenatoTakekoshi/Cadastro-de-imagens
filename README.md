@@ -5,4 +5,4 @@ Projeto simples de cadastro de imagens, utilizando  JSP,HTML,CSS e JavaScrypt.
 ![tela3](https://user-images.githubusercontent.com/89283196/132993949-92bccd78-38d6-4dbc-9aaa-97b3a60f29bd.PNG)
 ![tela4](https://user-images.githubusercontent.com/89283196/132993950-cd059b9e-9764-4151-9470-eb3ae8671f5a.PNG)
 ![tela5](https://user-images.githubusercontent.com/89283196/132993952-fb0d2481-f1bf-425a-a725-0bf9e968fe64.PNG)
-![tela6](https://user-images.githubusercontent.com/89283196/132993956-4043b453-51b2-4784-865d-c0e4ede555ca.PNG)
+![image](https://user-images.githubusercontent.com/89283196/133351227-d490e032-491f-453f-b2f5-a2e9868ecc3d.png)
