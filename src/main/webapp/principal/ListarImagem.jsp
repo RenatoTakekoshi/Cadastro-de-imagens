@@ -9,13 +9,14 @@
 <title>Imagens</title>
 <link rel="stylesheet"  href="/imgStore/estilo/cssImg.css">
 
+
 </head>
 <body>
 <header>
 <div class="topo">
 	<h1>Galeria</h1>
 	</div>
-<div class="btnHeader">
+<div >
 		<a href="Menu.jsp" ><button class="btnMenu">Voltar ao menu</button></a>
 	</div>
 	
@@ -23,14 +24,19 @@
 	
 
 	<div class="galeria">
-	<c:forEach var="c" items="${imagens}">
-		<div class="itemGaleria">
-		<img src="<c:out value="${c.IMG_URL}"/>" id="target" name="target" class="imgGaleria">
-		<span class="tituloImg">${c.IMG_TITULO }</span>
+		<c:forEach var="c" items="${imagens}">
+			<div class="itemGaleria">
+				<img src="<c:out value="${c.IMG_URL}"/>" id="target" name="target" class="imgGaleria">
+				<div class="imgDados">
+					<span class="tituloImg">${c.IMG_TITULO }</span>
+
+					<a href="/imgStore/DeletarImagemServlet?id=${c.ID_IMG}"><img src="/imgStore/icones/lixeira.png"></a>
+					
+				</div>
+				</form>
 		
-		</div>
+			</div>
 		</c:forEach>
-	
 	</div>
 
 

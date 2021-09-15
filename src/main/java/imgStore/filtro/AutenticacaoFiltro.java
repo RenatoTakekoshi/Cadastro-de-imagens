@@ -29,21 +29,15 @@ public class AutenticacaoFiltro implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response,  FilterChain chain) throws IOException, ServletException {
 		chain.doFilter(request, response);
 		
-		System.out.println("interceptando");
+
 		
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpSession session =req.getSession();
 		session.getAttribute("usuario");
 		String login = (String) session.getAttribute("usuario"); 
-		//String url = request.getParameter("url");
+
 		
-		//String urlParaAutenticar = req.getServletPath();
-		//System.out.println(urlParaAutenticar);
-		
-		if(login == null ) {
-			System.out.println(login);
-			System.out.println("não");			
-			//RequestDispatcher direcionar = request.getRequestDispatcher("/index.jsp?url="+urlParaAutenticar);
+		if(login == null ) {		
 			RequestDispatcher direcionar = request.getRequestDispatcher("/PaginaBarrada.jsp");
 			direcionar.forward(request, response);
 			return;

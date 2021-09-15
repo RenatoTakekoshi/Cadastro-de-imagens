@@ -21,10 +21,10 @@
  <input type="hidden" name="urlimagemBase64" id="urlimagemBase64" value="${imagem.URL_IMG}"/>
 
 
-	<input type="text" id="titulo" name="titulo" placeholder="Titulo da imagem" class="dadosLogin"><br><br>
+	<input type="text" id="titulo" name="titulo" placeholder="Titulo da imagem" class="dadosLogin" required><br><br>
 	<img alt="imagem"  src="" id="target" widht="200" height="200" class="imgSalvar"><br><br>
 	<label for="file" class="btnDados">Carregar foto</label>
-	<input type="file" id="file" name="file" onchange="uploadFile();"  class="inputFile"/><br><br>
+	<input type="file" id="file" name="file" onchange="uploadFile();"  class="inputFile" required/><br><br>
 
 	<input type="submit" value="enviar" class="btnDados"><br><br>
 	

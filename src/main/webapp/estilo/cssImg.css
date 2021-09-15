@@ -18,10 +18,17 @@ background-image: linear-gradient(45deg, black,gray);
 	padding:5px;
 	grid-gap:5px;
 
+
+}
+
+img{
+	cursor:pointer;
 }
 
 .itemGaleria{
 	position:relative;
+
+
 }
 
 .imgGaleria{
@@ -31,15 +38,30 @@ background-image: linear-gradient(45deg, black,gray);
 }
 
 .tituloImg{
-	position:absolute;
-	background-color:rgba(0,0,0,0.8);
+	color:white;
+	font-size:16px;
+	font-family:arial;
+}
+
+.imgDados{
+	position: absolute;
+	background-color:black;
 	left:0;
 	bottom:0;
 	width:100%;
+	padding:12px;
+	display:flex;
+	justify-content:space-between;
+	
+
+
+	
+}
+
+.btnDeletar{
+	margin-left: auto;
 	color:white;
-	padding:10px;
-	font-size:16px;
-	font-family:arial;
+
 }
 
 header{
@@ -55,11 +77,11 @@ header{
 
 .btnMenu{
 	background-color:yellow;
-	border-radius:5px;
 	width:100%;
 	border:none;
 	padding:10px;
 	color:black;
 	cursor:pointer;
+	border-radius:15px;
 }
 

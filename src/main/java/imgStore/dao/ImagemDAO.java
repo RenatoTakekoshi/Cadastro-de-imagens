@@ -34,6 +34,23 @@ public class ImagemDAO {
 		
 	}
 	
+	public  void DeletarImagem(int id) {
+		Connection con;
+		
+		try {
+			
+			con = ConexaoDB.createConnection();
+			String sql = "delete from imagens where ID_IMG = '" + id + "';";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.execute();
+			
+
+		 } catch (SQLException ex) {
+	         Logger.getLogger(usuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
+	     }
+		
+	}
+	
 	public static List<Imagem> ListarImagem(String nome) {
 
 		List<Imagem> imagens = new ArrayList<Imagem>();

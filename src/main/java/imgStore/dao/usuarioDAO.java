@@ -28,7 +28,7 @@ public class usuarioDAO {
 	 } catch (SQLException ex) {
          Logger.getLogger(usuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
      }
-		//return ok;	
+
 	}
 	
 	public static Usuario buscarUsuario(String nome) {
